@@ -2,17 +2,9 @@
 
 Product Customizer Studio adalah embeddable widget untuk preview desain produk secara client-side. MVP menyediakan flat product editor (corner-pin warp berbasis Fabric.js). Mode 3D menyediakan three-panel view: warp interaktif, viewport Three.js, dan preview render simulasi.
 
-## Documentation Map
+## Documentation
 
-- `specs/requirement.md`: scope MVP, active scope, future scope, kebutuhan fungsional dan non-fungsional.
-- `specs/design.md`: arsitektur, modul aplikasi, data flow (flat & 3D), three-panel view, texture pipeline, dan UI layout.
-- `specs/task.md`: breakdown tugas dengan status implementasi (`[x]` selesai, `[ ]` belum).
-- `specs/product-schema.md`: kontrak data produk.
-- `specs/events.md`: kontrak `postMessage` host <-> studio.
-- `specs/testing.md`: strategi unit, component, dan E2E test.
-- `specs/rendering-roadmap.md`: roadmap Level 1–6 dari MVP preview ke photorealistic render.
-- `steering/`: panduan produk, struktur, teknologi, bahasa, environment, dan dokumentasi.
-- `docs/adr/`: keputusan arsitektur.
+Lihat [`docs/001-INDEX.md`](docs/001-INDEX.md) untuk daftar lengkap seluruh dokumentasi proyek.
 
 ## Status Implementasi
 
@@ -46,11 +38,11 @@ npm install
 npm run dev       # http://localhost:5173
                   # ?product=wallet-01 → flat editor
                   # ?product=mug-01   → 3D three-panel view
-npm test          # 18 unit + component tests
+npm test          # 20 unit + component tests
 npm run build     # production build
 ```
 
 ## Metadata
 
-- Last updated: 2026-06-26
-- Version: 1.3.0
+- Last updated: 2026-06-30
+- Version: 1.4.0

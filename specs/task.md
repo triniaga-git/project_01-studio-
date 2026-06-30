@@ -56,14 +56,34 @@ Dokumen ini memisahkan pekerjaan MVP, Active Scope (rendering roadmap Level 1-4,
 
 ## Phase 3: MVP Polish & Deployment
 
-- [ ] Optimasi initial bundle.
+- [x] Optimasi initial bundle (main: 151 KB gzip, Three.js lazy: 241 KB gzip, embed.js: 917 bytes gzip).
 - [x] Pastikan `embed.js` kurang dari 5 KB gzip. (917 bytes gzip aktual)
-- [ ] Tambahkan loading dan error state.
-- [ ] Tambahkan responsive layout.
+- [x] Tambahkan loading dan error state (status bar error, Suspense fallback).
+- [x] Tambahkan responsive layout (three-panel stack di mobile, max-width 1040px).
 - [ ] Uji Chrome, Edge, Firefox, dan Safari jika tersedia.
 - [x] Build production.
-- [ ] Deploy ke Vercel atau Netlify.
+- [x] Deploy ke Vercel atau Netlify. (Vercel — live 2026-06-28)
 - [ ] Dokumentasikan cara embed untuk host developer.
+
+## Phase 3.1: Full Redesign — Bold & Modern (Selesai)
+
+Design system baru dengan CSS token system, dark studio backdrop sebagai signature element,
+dan copy yang konsisten (active voice, Bahasa Indonesia). Lihat `specs/design.md` bagian Design System.
+
+- [x] Definisikan CSS token system (`--bg`, `--text`, `--accent #0057FF`, `--studio #141414`, dll.).
+- [x] Redesign header: logo + badge level + product id monospace.
+- [x] Redesign product tabs: underline style, neutral untuk embedding.
+- [x] Redesign global toolbar: CTA hitam penuh, secondary border halus.
+- [x] Dark studio backdrop untuk Panel B dan C (`background: #141414`).
+- [x] Panel A: background light (`#EDE8DF`), warp control point `stroke: #0057FF`.
+- [x] Label panel: uppercase tracked A/B/C index (bukan dot warna).
+- [x] Shape switcher: pill group style, background hitam saat aktif.
+- [x] Redesign controls bar: label uppercase monospace, nilai biru.
+- [x] Custom range slider: thumb hitam di atas track abu.
+- [x] AI badge: semi-transparent di atas dark panel (subtle, bukan mencolok).
+- [x] Placeholder Panel A: ikon + teks, pointer-events none.
+- [x] Copy: "Simpan" (bukan "Save"), "Hapus desain" (bukan "Reset"), "Desain aktif" (bukan "Desain diunggah").
+- [x] Warp reset button: class `warp-reset-btn`, konsisten dengan design system.
 
 ## Phase 3.5: Enhanced 2D Mockup (Level 2) — Active Scope
 
@@ -133,5 +153,5 @@ Masih digerbang — butuh job queue, Blender render worker, dan integrasi AI API
 
 ## Metadata
 
-- Last updated: 2026-06-26
-- Version: 1.3.0
+- Last updated: 2026-06-28
+- Version: 1.4.0

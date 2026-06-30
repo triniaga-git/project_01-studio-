@@ -11,7 +11,7 @@
 
 ```bash
 git clone <repo-url>
-cd product-customizer-studio
+cd <nama-folder-proyek>
 npm install
 npm run dev
 ```
