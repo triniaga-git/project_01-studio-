@@ -1,0 +1,15 @@
+{
+  "id": "wallet-01",
+  "name": "Wallet 01",
+  "mode": "flat",
+  "thumbnail": "/templates/wallet-01/thumb.jpg",
+  "flat": {
+    "backgroundImage": "/templates/wallet-01/background.jpg",
+    "warpPoints": [
+      { "x": 120, "y": 90 },
+      { "x": 420, "y": 100 },
+      { "x": 400, "y": 320 },
+      { "x": 140, "y": 310 }
+    ]
+  }
+}

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Demo Host — Product Customizer Studio</title>
+    <style>
+      body { font-family: system-ui, sans-serif; max-width: 720px; margin: 40px auto; padding: 0 16px; }
+      .log { background: #f4f4f4; border-radius: 8px; padding: 12px; font-family: monospace; font-size: 13px; white-space: pre-wrap; max-height: 200px; overflow-y: auto; }
+      button { margin-right: 8px; margin-bottom: 16px; padding: 6px 14px; }
+    </style>
+  </head>
+  <body>
+    <h1>Demo Host</h1>
+    <p>Halaman ini mensimulasikan website host yang menanamkan Product Customizer Studio lewat satu tag script.</p>
+
+    <div id="studio-container"></div>
+
+    <script src="/embed.js" data-product="wallet-01" data-lang="id" data-width="600px" data-height="460px" data-container="#studio-container"></script>
+
+    <h2>Host Controls</h2>
+    <button onclick="window.ProductCustomizerStudio['wallet-01'].getPreview()">Get Preview</button>
+    <button onclick="window.ProductCustomizerStudio['wallet-01'].resetDesign()">Reset Design</button>
+    <button onclick="window.ProductCustomizerStudio['wallet-01'].setProduct('mug-01')">Ganti ke mug-01</button>
+
+    <h2>Event Log</h2>
+    <div class="log" id="log"></div>
+
+    <script>
+      var logEl = document.getElementById("log");
+      function logEvent(name, detail) {
+        var line = "[" + new Date().toLocaleTimeString() + "] " + name + " " + JSON.stringify(detail);
+        logEl.textContent = line + "\n" + logEl.textContent;
+      }
+      [
+        "studio-ready",
+        "product-loaded",
+        "preview-captured",
+        "design-saved",
+        "studio-error",
+      ].forEach(function (type) {
+        window.addEventListener("product-customizer-studio:" + type, function (e) {
+          logEvent(type, e.detail);
+        });
+      });
+    </script>
+  </body>
+</html>

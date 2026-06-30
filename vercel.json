@@ -1,0 +1,5 @@
+{
+  "rewrites": [
+    { "source": "/((?!embed\\.js|demo-host\\.html|templates/.*|assets/.*).*)", "destination": "/index.html" }
+  ]
+}

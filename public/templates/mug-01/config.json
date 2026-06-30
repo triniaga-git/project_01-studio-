@@ -1,0 +1,12 @@
+{
+  "id": "mug-01",
+  "name": "Mug 01",
+  "mode": "3d",
+  "thumbnail": "/templates/mug-01/thumb.jpg",
+  "model3d": {
+    "modelUrl": "primitive://cylinder",
+    "textureOffsetX": 0,
+    "textureOffsetY": 0,
+    "textureScale": 1
+  }
+}
